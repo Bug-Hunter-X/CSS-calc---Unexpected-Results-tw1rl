@@ -1,0 +1,3 @@
+To solve this issue, ensure that you are using consistent units within your `calc()` expression.  If you need to subtract a percentage from a percentage, consider using a variable or a more robust calculation approach that ensures consistent units for both parts of the expression. For example, to get a width of 80% (100% - 20%), you should do this instead:  `width: 80%;`. If the 20% is determined at runtime and needs to be calculated using `calc()`, ensure the surrounding element has its width set to 100%, otherwise the calculation will be relative to its own width.
+
+Alternatively, use JavaScript to calculate the width dynamically and set it with `element.style.width`.  This approach offers more control and flexibility if the calculation is complex.
